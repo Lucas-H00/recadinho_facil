@@ -43,6 +43,13 @@ Você pode testar o MVP funcional em tempo real através do link de produção:
 
 ---
 
+## Equipe Desenvolvedora
+
+- Lucas Henrique Lopes Rodrigues
+- Iale Moreira
+
+---
+
 ## Como Rodar o Projeto Localmente
 
 Se você quiser clonar e executar o código na sua máquina:
