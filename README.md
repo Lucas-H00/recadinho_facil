@@ -1,32 +1,53 @@
-# React + TypeScript + Vite
+# RecadinhoFácil (AgendaKids)
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+> Um micro-SaaS focado em otimizar a rotina de professoras da educação infantil, gerando mensagens diárias e personalizadas para os pais via WhatsApp em segundos.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Sobre o Projeto
 
-## React Compiler
+O **RecadinhoFácil** nasceu para resolver uma dor real e recorrente: professoras de creches e pré-escolas perdem dezenas de minutos todos os dias redigindo mensagens repetitivas no WhatsApp (informando alimentação, repouso e humor de cada criança).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Esta aplicação web foi desenvolvida como MVP (Minimum Viable Product) focado em velocidade, usabilidade mobile-first e acolhimento, permitindo que a educadora registre os status dos alunos e copie um texto carinhoso pronto para envio instantâneo.
 
-## Expanding the Oxlint configuration
+---
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+## Tecnologias Utilizadas
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
-```
+Este projeto foi construído utilizando uma stack moderna e de alta performance:
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+- **Frontend:** React com TypeScript
+- **Estilização:** Tailwind CSS (Design responsivo e focado em dispositivos móveis)
+- **Gerenciamento de Estado & Persistência:** React Hooks & `localStorage`
+- **Deploy e Hospedagem:** Netlify
+
+---
+
+## Funcionalidades do MVP (Must Have)
+
+- **Gestão de Alunos:** Cadastro simples e rápido dos alunos e nomes dos responsáveis.
+- **Painel de Status Diários:** Interface interativa com botões de marcação rápida para:
+  - Alimentação (_Comeu tudo, parcial, não quis lanchar_)
+  - Descanso (_Dormiu bem, pouco, não quis_)
+  - Humor (_Feliz, calmo, manhoso_)
+  - Observações extras customizadas
+- **Motor de Geração Automática:** Transforma os cliques em um texto fluido, humanizado e pronto para o WhatsApp.
+- **Cópia com 1 Clique:** Botão de cópia rápida para a área de transferência com feedback visual.
+
+---
+
+## Acesse a Aplicação Online
+
+Você pode testar o MVP funcional em tempo real através do link de produção:
+[https://beautiful-zabaione-1a441f.netlify.app](https://beautiful-zabaione-1a441f.netlify.app)
+
+---
+
+## Como Rodar o Projeto Localmente
+
+Se você quiser clonar e executar o código na sua máquina:
+
+1. Clone o repositório:
+   ```bash
+   git clone [https://github.com/Lucas-H00/recadinho_facil.git](https://github.com/Lucas-H00/recadinho_facil.git)
+   ```
