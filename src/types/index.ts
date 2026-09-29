@@ -18,29 +18,29 @@ export interface DailyStatus {
   extraNote: string;
 }
 
-export const FEEDING_OPTIONS: { value: FeedingStatus; label: string; emoji: string }[] = [
-  { value: 'comeu_tudo', label: 'Comeu tudo', emoji: '🍽️' },
-  { value: 'comeu_parcialmente', label: 'Comeu parcialmente', emoji: '🍴' },
-  { value: 'nao_quis', label: 'Não quis lanchar', emoji: '🚫' },
+export const FEEDING_OPTIONS: { value: FeedingStatus; label: string }[] = [
+  { value: 'comeu_tudo', label: 'Comeu tudo' },
+  { value: 'comeu_parcialmente', label: 'Comeu parcialmente' },
+  { value: 'nao_quis', label: 'N\u00e3o quis lanchar' },
 ];
 
-export const REST_OPTIONS: { value: RestStatus; label: string; emoji: string }[] = [
-  { value: 'dormiu_bem', label: 'Dormiu bem', emoji: '😴' },
-  { value: 'dormiu_pouco', label: 'Dormiu pouco', emoji: '😐' },
-  { value: 'nao_quis_dormir', label: 'Não quis dormir', emoji: '👀' },
+export const REST_OPTIONS: { value: RestStatus; label: string }[] = [
+  { value: 'dormiu_bem', label: 'Dormiu bem' },
+  { value: 'dormiu_pouco', label: 'Dormiu pouco' },
+  { value: 'nao_quis_dormir', label: 'N\u00e3o quis dormir' },
 ];
 
-export const MOOD_OPTIONS: { value: MoodStatus; label: string; emoji: string }[] = [
-  { value: 'feliz_participativo', label: 'Feliz e participativo', emoji: '😄' },
-  { value: 'calmo', label: 'Calmo', emoji: '😊' },
-  { value: 'manhoso', label: 'Um pouco manhoso', emoji: '😢' },
+export const MOOD_OPTIONS: { value: MoodStatus; label: string }[] = [
+  { value: 'feliz_participativo', label: 'Feliz e participativo' },
+  { value: 'calmo', label: 'Calmo' },
+  { value: 'manhoso', label: 'Um pouco manhoso' },
 ];
 
 export const DEFAULT_CLASS_GROUPS = [
-  'Berçário',
+  'Ber\u00e7\u00e1rio',
   'Maternal I',
   'Maternal II',
   'Jardim I',
   'Jardim II',
-  'Pré-escola',
+  'Pr\u00e9-escola',
 ];

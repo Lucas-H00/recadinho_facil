@@ -1,36 +1,25 @@
 interface StatusButtonProps {
-  emoji: string;
   label: string;
   isSelected: boolean;
   onClick: () => void;
-  colorClass?: string;
 }
 
-export default function StatusButton({
-  emoji,
-  label,
-  isSelected,
-  onClick,
-  colorClass = 'bg-pastel-pink-light border-pastel-pink',
-}: StatusButtonProps) {
+export default function StatusButton({ label, isSelected, onClick }: StatusButtonProps) {
   return (
     <button
       type="button"
       onClick={onClick}
-      className={`w-full flex items-center gap-3 px-4 py-3 rounded-xl border-2 transition-all duration-200 text-left active:scale-[0.97] ${
+      className={`w-full flex items-center justify-between px-3.5 py-2.5 rounded-lg border text-sm transition-all ${
         isSelected
-          ? `${colorClass} shadow-md ring-2 ring-offset-1 ring-pastel-pink/50 font-semibold`
-          : 'bg-white border-gray-100 hover:border-gray-200 hover:shadow-sm'
+          ? 'bg-blue-50 border-blue-300 text-blue-800 font-medium'
+          : 'bg-white border-slate-200 text-slate-600 hover:border-slate-300 hover:bg-slate-50'
       }`}
     >
-      <span className="text-2xl">{emoji}</span>
-      <span className={`text-sm ${
-        isSelected ? 'text-warm-text' : 'text-warm-text-light'
-      }`}>
-        {label}
-      </span>
+      <span>{label}</span>
       {isSelected && (
-        <span className="ml-auto text-pastel-pink text-lg">✓</span>
+        <svg className="w-4 h-4 text-blue-600 shrink-0" fill="currentColor" viewBox="0 0 20 20">
+          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
+        </svg>
       )}
     </button>
   );

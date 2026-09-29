@@ -14,7 +14,6 @@ export default function CopyButton({ text, disabled }: CopyButtonProps) {
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     } catch {
-      // Fallback for older browsers
       const textarea = document.createElement('textarea');
       textarea.value = text;
       textarea.style.position = 'fixed';
@@ -33,19 +32,19 @@ export default function CopyButton({ text, disabled }: CopyButtonProps) {
       <button
         onClick={handleCopy}
         disabled={disabled}
-        className={`w-full py-4 px-6 rounded-2xl text-base font-bold transition-all duration-300 active:scale-[0.97] shadow-lg ${
+        className={`w-full py-3 px-4 rounded-lg text-sm font-medium transition-all ${
           copied
-            ? 'bg-pastel-mint text-warm-text shadow-pastel-mint/30'
+            ? 'bg-green-600 text-white'
             : disabled
-              ? 'bg-gray-200 text-gray-400 cursor-not-allowed shadow-none'
-              : 'bg-gradient-to-r from-pastel-pink to-pastel-lavender text-warm-text hover:shadow-xl hover:shadow-pastel-pink/20'
+              ? 'bg-slate-100 text-slate-400 cursor-not-allowed'
+              : 'bg-blue-600 hover:bg-blue-700 text-white shadow-sm'
         }`}
       >
-        {copied ? '✅ Texto copiado com sucesso! 🚀' : '📋 Copiar Recado para o WhatsApp'}
+        {copied ? 'Texto copiado com sucesso!' : 'Copiar Recado para o WhatsApp'}
       </button>
       {copied && (
-        <p className="text-center text-sm text-pastel-mint font-medium copy-success">
-          Agora é só colar no WhatsApp! 💬
+        <p className="text-center text-xs text-green-600 font-medium copy-success">
+          Agora é só colar no WhatsApp.
         </p>
       )}
     </div>
