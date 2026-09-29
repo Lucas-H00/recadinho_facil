@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pastel-pink: #f8c8dc;
+  --color-pastel-pink-light: #fde8f0;
+  --color-pastel-lavender: #d8c4e9;
+  --color-pastel-lavender-light: #efe4f7;
+  --color-pastel-mint: #b5ead7;
+  --color-pastel-mint-light: #d4f5e9;
+  --color-pastel-yellow: #fce4a8;
+  --color-pastel-yellow-light: #fef3d7;
+  --color-pastel-blue: #a8d8ea;
+  --color-pastel-blue-light: #d4ecf5;
+  --color-pastel-peach: #ffd1a9;
+  --color-pastel-peach-light: #ffe8d1;
+  --color-warm-bg: #fef7f0;
+  --color-warm-card: #ffffff;
+  --color-warm-text: #4a3728;
+  --color-warm-text-light: #8b7355;
+}
+
+body {
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  background-color: var(--color-warm-bg);
+  color: var(--color-warm-text);
+}
+
+.copy-success {
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(10px); }
+  15% { opacity: 1; transform: translateY(0); }
+  85% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
+}
